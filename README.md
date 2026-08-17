@@ -53,5 +53,5 @@ Mini-Games-Hub/
 * Multiple games in one website
 * Mobile-friendly layout
 
- 👩‍💻 Author
+ 👩‍💻 Author :
 SINCHANA D M
