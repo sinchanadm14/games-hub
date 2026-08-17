@@ -1,0 +1,206 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.game-grid {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+
+    transition: transform 0.3s, background 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.game-card h2 {
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 6px;
+
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.game-card button {
+    background: #00c6ff;
+    color: white;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.game-screen {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.game-screen h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.choices {
+    margin: 25px 0;
+}
+
+.choices button {
+    font-size: 18px;
+}
+
+input {
+    padding: 12px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 15px;
+}
+
+.back-btn {
+    display: block;
+    margin: 30px auto;
+    background: #555;
+    color: white;
+}
+
+#rpsResult,
+#guessResult,
+#question,
+#quizScore,
+#ticStatus {
+    font-size: 20px;
+    margin: 20px;
+}
+
+#answers button {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto;
+    background: white;
+    color: #222;
+}
+
+
+/* TIC TAC TOE */
+
+.board {
+    display: grid;
+
+    grid-template-columns: repeat(3, 100px);
+
+    grid-template-rows: repeat(3, 100px);
+
+    gap: 8px;
+
+    justify-content: center;
+
+    margin: 25px auto;
+}
+
+.board button {
+    width: 100px;
+    height: 100px;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 42px;
+
+    background: white;
+    color: #222;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #ccc;
+}
+
+
+@media (max-width: 650px) {
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .board button {
+        width: 80px;
+        height: 80px;
+    }
+}

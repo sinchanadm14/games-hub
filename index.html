@@ -1,0 +1,166 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎮 Mini Games Hub</h1>
+    <p>Choose a game and have fun!</p>
+</header>
+
+<main>
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+
+        <div class="game-grid">
+
+            <div class="game-card">
+                <div class="icon">✊</div>
+                <h2>Rock Paper Scissors</h2>
+                <p>Play against the computer!</p>
+                <button onclick="showGame('rps')">Play Game</button>
+            </div>
+
+            <div class="game-card">
+                <div class="icon">🔢</div>
+                <h2>Number Guessing</h2>
+                <p>Guess the secret number!</p>
+                <button onclick="showGame('guess')">Play Game</button>
+            </div>
+
+            <div class="game-card">
+                <div class="icon">🧠</div>
+                <h2>Quiz Game</h2>
+                <p>Test your knowledge!</p>
+                <button onclick="showGame('quiz')">Play Game</button>
+            </div>
+
+            <div class="game-card">
+                <div class="icon">❌⭕</div>
+                <h2>Tic Tac Toe</h2>
+                <p>Challenge your friend!</p>
+                <button onclick="showGame('tic')">Play Game</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ROCK PAPER SCISSORS -->
+    <section id="rps" class="screen game-screen">
+
+        <h2>✊ Rock Paper Scissors</h2>
+
+        <p id="rpsResult">Choose your move!</p>
+
+        <div class="choices">
+            <button onclick="playRPS('rock')">🪨 Rock</button>
+            <button onclick="playRPS('paper')">📄 Paper</button>
+            <button onclick="playRPS('scissors')">✂️ Scissors</button>
+        </div>
+
+        <p id="rpsScore">You: 0 | Computer: 0</p>
+
+        <button class="back-btn" onclick="goHome()">← Back to Games</button>
+
+    </section>
+
+
+    <!-- NUMBER GUESSING -->
+    <section id="guess" class="screen game-screen">
+
+        <h2>🔢 Number Guessing Game</h2>
+
+        <p>Guess a number between 1 and 100</p>
+
+        <input
+            type="number"
+            id="guessInput"
+            placeholder="Enter number"
+        >
+
+        <button onclick="checkGuess()">Guess</button>
+
+        <p id="guessResult"></p>
+        <p id="attempts"></p>
+
+        <button onclick="resetGuess()">Restart</button>
+
+        <button class="back-btn" onclick="goHome()">
+            ← Back to Games
+        </button>
+
+    </section>
+
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen game-screen">
+
+        <h2>🧠 Quiz Game</h2>
+
+        <p id="question"></p>
+
+        <div id="answers"></div>
+
+        <p id="quizScore"></p>
+
+        <button onclick="nextQuestion()">Next Question</button>
+
+        <button class="back-btn" onclick="goHome()">
+            ← Back to Games
+        </button>
+
+    </section>
+
+
+    <!-- TIC TAC TOE -->
+    <section id="tic" class="screen game-screen">
+
+        <h2>❌⭕ Tic Tac Toe</h2>
+
+        <p id="ticStatus">Player X's turn</p>
+
+        <div class="board">
+
+            <button onclick="ticMove(0)"></button>
+            <button onclick="ticMove(1)"></button>
+            <button onclick="ticMove(2)"></button>
+
+            <button onclick="ticMove(3)"></button>
+            <button onclick="ticMove(4)"></button>
+            <button onclick="ticMove(5)"></button>
+
+            <button onclick="ticMove(6)"></button>
+            <button onclick="ticMove(7)"></button>
+            <button onclick="ticMove(8)"></button>
+
+        </div>
+
+        <button onclick="resetTic()">Restart</button>
+
+        <button class="back-btn" onclick="goHome()">
+            ← Back to Games
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>🎮 Mini Games Hub | HTML • CSS • JavaScript</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
